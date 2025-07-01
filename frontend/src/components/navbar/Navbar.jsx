@@ -9,7 +9,7 @@ export const Nav = () => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="bg-[#3190ce] text-white py-4 px-6 flex justify-between items-center fixed w-full z-50">
+      <nav className="bg-[#3190ce] text-white py-4 px-6 flex justify-between items-center relative w-full z-50 ">
         <h1 className="text-2xl font-bold">DaimTools</h1>
 
         {/* Desktop Menu */}
@@ -43,6 +43,8 @@ export const Nav = () => {
             />
           )}
         </div>
+          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#3190ce] via-white to-[#3190ce]"></div>
+
       </nav>
 
       {/* Mobile Menu */}
