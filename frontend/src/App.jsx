@@ -2,6 +2,7 @@ import { Hero } from "./sections/Hero/Hero";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Calc } from "./sections/Calculators/Calc";
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Hero />
+      <Calc   />
     </>
   );
 }
