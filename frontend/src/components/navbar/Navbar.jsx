@@ -10,7 +10,7 @@ export const Nav = () => {
     <>
       {/* Navigation Bar */}
       <nav className="bg-[#3190ce] text-white py-4 px-6 flex justify-between items-center relative w-full z-50 ">
-        <h1 className="text-2xl font-bold">DaimTools</h1>
+        <h1 className="text-2xl font-bold">CalcMate</h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-xl">

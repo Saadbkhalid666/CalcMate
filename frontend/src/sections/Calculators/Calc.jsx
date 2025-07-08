@@ -1,4 +1,4 @@
-import { Cards } from "../../components/CaclCards/Cards";
+import { Cards } from "../../components/CalcCards/Cards";
 import { ToolsList } from "../../data/tools";
 
 export const Calc = () => {
