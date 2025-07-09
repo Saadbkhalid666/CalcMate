@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { Calc } from "./sections/Calculators/Calc";
 import { About } from "./sections/About/About";
 import { Contact } from "./sections/Contact/Contact";
-import { Footer } from "./sections/footer/footer";
 
 function App() {
   useEffect(() => {
@@ -21,7 +20,6 @@ function App() {
       <Calc />
       <About />
       <Contact  />
-      <Footer  />
     </>
   );
 }

@@ -1,19 +1,37 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi"; // Install react-icons if not installed
-
+import { NavLink, useNavigate } from "react-router-dom";
 export const Nav = () => {
-  const navItems = ["Home", "Calculators", "About Us", "Contact"];
+  const navItems = ["Calculators", "About Us", "Contact"];
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const location = useNavigate();
+  const onHomePage = location.path === "/";
   return (
     <>
       {/* Navigation Bar */}
       <nav className="bg-[#3190ce] text-white py-4 px-6 flex justify-between items-center relative w-full z-50 ">
-        <h1 className="text-2xl font-bold">CalcMate</h1>
+        <NavLink to={"/"} className="text-2xl font-bold">CalcMate</NavLink>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-xl">
+          {onHomePage ? (
+            <Link
+              to={"home"}
+              smooth={true}
+              duration={500}
+              className="hover:cursor-pointer hover:text-blue-950 font-extrabold font-serif transition-all duration-300 ease-in-out"
+            >
+              Home
+            </Link>
+          ) : (
+            <NavLink
+              className="hover:cursor-pointer hover:text-blue-950 font-extrabold font-serif transition-all duration-300 ease-in-out"
+              to={"/"}
+            >
+              Home
+            </NavLink>
+          )}
           {navItems.map((item, index) => (
             <Link
               key={index}
@@ -43,8 +61,7 @@ export const Nav = () => {
             />
           )}
         </div>
-          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#3190ce] via-white to-[#3190ce]"></div>
-
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#3190ce] via-white to-[#3190ce]"></div>
       </nav>
 
       {/* Mobile Menu */}
