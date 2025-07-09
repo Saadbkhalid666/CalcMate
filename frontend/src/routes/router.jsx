@@ -7,7 +7,8 @@ import TermsAndConditions from "../pages/Terms&Conditions/Terms&Conditions";
 import { Footer } from "../sections/footer/footer";
 import { GSTCalculator } from "../pages/CalculatorPages/GSTCalculator";
 import { PercentageCalculator } from "../pages/CalculatorPages/PercentageCalculator";
-import { LoanEMICalculator } from "../pages/CalculatorPages/Loan/EmiCalculator";
+import { LoanEMICalculator } from "../pages/CalculatorPages/LoanEmiCalculator";
+import { BMICalculator } from "../pages/CalculatorPages/BmiCalculator";
 
 export const router  =  createBrowserRouter([
     {path:"/",element:<Layout   />, children:[
@@ -17,6 +18,7 @@ export const router  =  createBrowserRouter([
         {path:'/gst-calculator',element:<GSTCalculator   />},
         {path:'/percentage-calculator',element:<PercentageCalculator  />},
         {path:'/loan-emi-calculator',element:<LoanEMICalculator  />},
+        {path:'/bmi-calculator',element:<BMICalculator  />},
 
     ]}
 ])
