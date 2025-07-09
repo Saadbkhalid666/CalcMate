@@ -9,6 +9,7 @@ import { GSTCalculator } from "../pages/CalculatorPages/GSTCalculator";
 import { PercentageCalculator } from "../pages/CalculatorPages/PercentageCalculator";
 import { LoanEMICalculator } from "../pages/CalculatorPages/LoanEmiCalculator";
 import { BMICalculator } from "../pages/CalculatorPages/BmiCalculator";
+import { AgeCalculator } from "../pages/CalculatorPages/AgeCalculator";
 
 export const router  =  createBrowserRouter([
     {path:"/",element:<Layout   />, children:[
@@ -19,6 +20,7 @@ export const router  =  createBrowserRouter([
         {path:'/percentage-calculator',element:<PercentageCalculator  />},
         {path:'/loan-emi-calculator',element:<LoanEMICalculator  />},
         {path:'/bmi-calculator',element:<BMICalculator  />},
+        {path:'/age-calculator',element:<AgeCalculator  />},
 
     ]}
 ])
