@@ -5,12 +5,18 @@ import App from "../App";
 import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "../pages/Terms&Conditions/Terms&Conditions";
 import { Footer } from "../sections/footer/footer";
+import { GSTCalculator } from "../pages/CalculatorPages/GSTCalculator";
+import { PercentageCalculator } from "../pages/CalculatorPages/PercentageCalculator";
+import { LoanEMICalculator } from "../pages/CalculatorPages/Loan/EmiCalculator";
 
 export const router  =  createBrowserRouter([
     {path:"/",element:<Layout   />, children:[
         {index:true,element:<App   />},
         {path:'privacy-policy',element:<PrivacyPolicy    />},
         {path:'terms',element:<TermsAndConditions    />},
+        {path:'/gst-calculator',element:<GSTCalculator   />},
+        {path:'/percentage-calculator',element:<PercentageCalculator  />},
+        {path:'/loan-emi-calculator',element:<LoanEMICalculator  />},
 
     ]}
 ])
@@ -18,8 +24,14 @@ export const router  =  createBrowserRouter([
 function Layout (){
 
     return <>
-    <Nav   />
-    <Outlet  />
-    <Footer  />
+    <div className="min-h-screen flex flex-col">
+      <Nav /> {/* optional */}
+      
+      <main className="flex-grow">
+        <Outlet /> {/* this is where routed content goes */}
+      </main>
+
+      <Footer />
+    </div>
     </>
 }

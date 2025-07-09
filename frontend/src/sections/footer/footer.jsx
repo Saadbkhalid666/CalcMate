@@ -1,19 +1,40 @@
-import {Link} from "react-scroll"
+import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-export const Footer = () =>{
-     return (
-    <footer className="bg-[#3190ce] text-white py-6 border-t shadow-md">
+
+export const Footer = () => {
+  return (
+    <footer className="w-full bg-[#3190ce] text-white py-6 border-t shadow-md">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="text-center md:text-left mb-4 md:mb-0">
           <h2 className="text-lg font-semibold">CalcMate</h2>
-          <p className="text-sm">Simplifying your calculations, one click at a time.</p>
+          <p className="text-sm">
+            Simplifying your calculations, one click at a time.
+          </p>
         </div>
 
         <div className="flex gap-4 mb-4 md:mb-0">
-          <Link  to="aboutus" smooth={true} duration={500}  className="text-sm hover:underline">About</Link>
-          <NavLink to="privacy-policy" className="text-sm hover:underline">Privacy Policy</NavLink>
-          <NavLink to="terms" className="text-sm hover:underline">Terms & Conditions</NavLink>
-          <Link  to="contact" smooth={true} duration={500} className="text-sm hover:underline">Contact</Link>
+          <Link
+            to="aboutus"
+            smooth={true}
+            duration={500}
+            className="text-sm hover:underline cursor-pointer"
+          >
+            About
+          </Link>
+          <NavLink to="/privacy-policy" className="text-sm hover:underline">
+            Privacy Policy
+          </NavLink>
+          <NavLink to="/terms" className="text-sm hover:underline">
+            Terms & Conditions
+          </NavLink>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="text-sm hover:underline cursor-pointer"
+          >
+            Contact
+          </Link>
         </div>
 
         <div className="text-center md:text-right text-sm">
