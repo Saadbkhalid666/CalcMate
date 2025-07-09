@@ -25,7 +25,7 @@ export const router  =  createBrowserRouter([
         {path:'/bmi-calculator',element:<BMICalculator  />},
         {path:'/age-calculator',element:<AgeCalculator  />},
         {path:'/scientific-calculator',element:<ScientificCalculator  />},
-        {path:'/currency-converter-calculator',element:<CurrencyConverter  />},
+        {path:'/currency-converter',element:<CurrencyConverter  />},
         {path:'/time-duration-calculator',element:<TimeDurationCalculator  />},
 
     ]}
