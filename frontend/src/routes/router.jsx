@@ -14,6 +14,7 @@ import { ScientificCalculator } from "../pages/CalculatorPages/ScientificCalcula
 import { CurrencyConverter } from "../pages/CalculatorPages/CurrencyConverter";
 import { TimeDurationCalculator } from "../pages/CalculatorPages/TimeDurationCalculator";
 import { TaxCalculator } from "../pages/CalculatorPages/TaxCalculator";
+import { UnitConverter } from "../pages/CalculatorPages/UnitConverter";
 
 export const router  =  createBrowserRouter([
     {path:"/",element:<Layout   />, children:[
@@ -29,6 +30,7 @@ export const router  =  createBrowserRouter([
         {path:'/currency-converter',element:<CurrencyConverter  />},
         {path:'/time-duration-calculator',element:<TimeDurationCalculator  />},
         {path:'/tax-calculator',element:<TaxCalculator  />},
+        {path:'/unit-converter',element:<UnitConverter  />},
 
     ]}
 ])
