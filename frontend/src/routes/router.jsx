@@ -13,6 +13,7 @@ import { AgeCalculator } from "../pages/CalculatorPages/AgeCalculator";
 import { ScientificCalculator } from "../pages/CalculatorPages/ScientificCalculator";
 import { CurrencyConverter } from "../pages/CalculatorPages/CurrencyConverter";
 import { TimeDurationCalculator } from "../pages/CalculatorPages/TimeDurationCalculator";
+import { TaxCalculator } from "../pages/CalculatorPages/TaxCalculator";
 
 export const router  =  createBrowserRouter([
     {path:"/",element:<Layout   />, children:[
@@ -27,6 +28,7 @@ export const router  =  createBrowserRouter([
         {path:'/scientific-calculator',element:<ScientificCalculator  />},
         {path:'/currency-converter',element:<CurrencyConverter  />},
         {path:'/time-duration-calculator',element:<TimeDurationCalculator  />},
+        {path:'/tax-calculator',element:<TaxCalculator  />},
 
     ]}
 ])
