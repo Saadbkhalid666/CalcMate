@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,42 +24,51 @@ export const Contact = () => {
     e.preventDefault();
     const { name, email, subject, message } = formData;
 
-    if (!name.trim()) {
-      toast.error("Name is required!");
-    } else if (!email.trim()) {
-      toast.error("Email is required!");
-    } else if (!email.includes("@") || !email.endsWith("@gmail.com")) {
-      toast.error("Please enter a valid Gmail address (e.g. name@gmail.com).");
-    } else if (!subject.trim()) {
-      toast.error("Please select a subject.");
-    } else if (!message.trim()) {
-      toast.error("Please enter your message.");
-    } else {
-      try {
-        const form = new FormData();
-        form.append("name", name);
-        form.append("email", email);
-        form.append("subj", subject);
-        form.append("message", message);
+    // Validation
+    if (!name || !email || !subject || !message) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+    if (!email.includes("@") || !email.endsWith("gmail.com")) {
+      toast.error("Please enter a valid Gmail address");
+      return;
+    }
 
-        const res = await axios.post("http://127.0.0.1:8000/api/contact", form);
-        console.log("Response");
+    setIsLoading(true);
 
-        if (res.data.status === "success") {
-          toast.success("Message Sent Successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-        }else{
-          toast.error(`Something Went Wrong: ${res.data.message}`)
-        }
-      } catch (err) {
-        toast.error("Network Error");
-        console.log(err);
+    try {
+      const form = new FormData();
+      form.append("name", name);
+      form.append("email", email);
+      form.append("subject", subject); // fixed this
+      form.append("message", message);
+
+      const res = await axios.post("http://127.0.0.1:8000/api/contact", form);
+
+      if (res.data.status.toLowerCase() === "success") {
+        toast.success("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(`Something went wrong: ${res.data.message}`);
       }
+    } catch (err) {
+      console.error("❌ Axios Error:", err);
+      if (err.response) {
+        console.log("⚠️ Server Response:", err.response);
+        console.log("⚠️ Data:", err.response.data);
+      } else if (err.request) {
+        console.log("📡 Request Sent But No Response:", err.request);
+      } else {
+        console.log("❌ Error Setting Up Request:", err.message);
+      }
+      toast.error("Network Error");
+    } finally {
+      setIsLoading(false); // Ensure loading state resets
     }
   };
 
@@ -123,9 +133,10 @@ export const Contact = () => {
           <button
             type="submit"
             className="relative overflow-hidden group px-6 py-2 rounded-md font-semibold bg-white text-[#3190ce] transition duration-200 border-none z-10"
+            disabled={isLoading}
           >
             <span className="relative z-20 transition duration-300 group-hover:text-white">
-              Submit
+              {isLoading ? "Sending..." : "Submit"}
             </span>
             <span className="absolute inset-0 bg-[#3190ce] origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out z-10"></span>
           </button>
