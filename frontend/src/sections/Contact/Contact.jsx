@@ -2,6 +2,7 @@ import { useState } from "react";
 import "@fontsource/lobster";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,14 +34,31 @@ export const Contact = () => {
     } else if (!message.trim()) {
       toast.error("Please enter your message.");
     } else {
-      // Success action
-      toast.success("Message submitted successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      try {
+        const form = new FormData();
+        form.append("name", name);
+        form.append("email", email);
+        form.append("subj", subject);
+        form.append("message", message);
+
+        const res = await axios.post("http://127.0.0.1:8000/api/contact", form);
+        console.log("Response");
+
+        if (res.data.status === "success") {
+          toast.success("Message Sent Successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }else{
+          toast.error(`Something Went Wrong: ${res.data.message}`)
+        }
+      } catch (err) {
+        toast.error("Network Error");
+        console.log(err);
+      }
     }
   };
 
