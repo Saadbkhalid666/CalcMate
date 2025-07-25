@@ -1,4 +1,4 @@
-import daimLogo from "../../assets/daimLogo.png";
+import daimLogo from "../../assets/daimlogo.png";
 export const About = () => {
   return (
     <section id="aboutus" className="mt-[10%]">
