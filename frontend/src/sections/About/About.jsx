@@ -4,7 +4,7 @@ export const About = () => {
     <section id="aboutus" className="mt-[10%]">
           <h1 className="text-5xl text-[#3190ce] text-center font-extrabold font-sans mb-[5%] " data-aos="fade" data-delay-aos={100}>About Us</h1>
       <div className="container flex flex-row px-4 ">
-        <div className="content-container flex flex-col justify-center  " data-aos="fade-right" data-delay-aos={120}>
+        <div className="content-container" data-aos="fade-right" data-delay-aos={120}>
           <p className="lg:w-2xl text-xl text-center">
             <strong className="text-[#3190ce]">CalcMate</strong>is a powerful
             and intuitive
