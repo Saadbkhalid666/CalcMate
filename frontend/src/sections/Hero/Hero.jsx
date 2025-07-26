@@ -4,7 +4,7 @@ import { SlickSlider } from "../../Slick/SlickSlider";
 
 export const Hero = () => {
   return (
-    <div className="bg-[#3190ce] min-h-[100vh] w-full">
+    <div className="bg-[#3190ce] min-h-[90vh] w-full">
       <div
         className="intro-container flex justify-center flex-col pb-10  pt-35"
         id="home"
