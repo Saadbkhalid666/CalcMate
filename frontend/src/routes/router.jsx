@@ -44,8 +44,8 @@ function Layout (){
       <main className="flex-grow">
         <Outlet /> {/* this is where routed content goes */}
       </main>
-
       <Footer />
+
     </div>
     </>
 }

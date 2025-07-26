@@ -19,7 +19,7 @@ export const AgeCalculator = () => {
 
     if (days < 0) {
       months--;
-      days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); // previous month days
+      days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
     }
 
     if (months < 0) {
@@ -31,35 +31,37 @@ export const AgeCalculator = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-md border border-gray-200">
-      <h2 className="text-2xl font-bold mb-4 text-[#3190ce]">Age Calculator</h2>
+    <div className="flex items-center justify-center min-h-[calc(100vh-200px)] px-4 bg-gray-100">
+      <div className="max-w-md w-full p-6 bg-white rounded-xl shadow-md border border-gray-200">
+        <h2 className="text-2xl font-bold mb-4 text-[#3190ce]">Age Calculator</h2>
 
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-1">
-          Date of Birth
-        </label>
-        <input
-          type="date"
-          value={dob}
-          onChange={(e) => setDob(e.target.value)}
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#3190ce]"
-        />
-      </div>
-
-      <button
-        onClick={calculateAge}
-        className="w-full bg-[#3190ce] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition"
-      >
-        Calculate Age
-      </button>
-
-      {ageResult && (
-        <div className="mt-6 text-gray-800 space-y-2">
-          <p>
-            <strong>Your Age:</strong> {ageResult.years} years, {ageResult.months} months, {ageResult.days} days
-          </p>
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Date of Birth
+          </label>
+          <input
+            type="date"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#3190ce]"
+          />
         </div>
-      )}
+
+        <button
+          onClick={calculateAge}
+          className="w-full bg-[#3190ce] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition"
+        >
+          Calculate Age
+        </button>
+
+        {ageResult && (
+          <div className="mt-6 text-gray-800 space-y-2">
+            <p>
+              <strong>Your Age:</strong> {ageResult.years} years, {ageResult.months} months, {ageResult.days} days
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
