@@ -34,6 +34,8 @@ export const TimeDurationCalculator = () => {
   };
 
   return (
+    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-gray-50 px-4">
+
     <div className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-md border border-gray-200">
       <h2 className="text-2xl font-bold mb-4 text-[#3190ce]">Time Duration Calculator</h2>
 
@@ -73,6 +75,7 @@ export const TimeDurationCalculator = () => {
       ) : result === null ? null : (
         <p className="mt-6 text-red-600">{result}</p>
       )}
+    </div>
     </div>
   );
 };

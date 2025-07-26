@@ -65,6 +65,8 @@ export const UnitConverter = () => {
   };
 
   return (
+    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-gray-50 px-4">
+
     <div className="p-6 max-w-xl mx-auto mt-10 bg-white rounded-xl shadow-md">
       <h1 className="text-2xl font-bold text-center text-[#3190ce] mb-4">Unit Converter</h1>
 
@@ -129,6 +131,7 @@ export const UnitConverter = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

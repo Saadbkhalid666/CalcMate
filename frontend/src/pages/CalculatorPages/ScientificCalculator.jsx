@@ -46,6 +46,8 @@ export const ScientificCalculator = () => {
   ];
 
   return (
+    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-gray-50 px-4">
+
     <div className="max-w-md mx-auto bg-white border shadow-md p-4 rounded-xl">
       <h2 className="text-2xl font-bold mb-4 text-[#3190ce]">Scientific Calculator</h2>
 
@@ -73,6 +75,7 @@ export const ScientificCalculator = () => {
           </button>
         ))}
       </div>
+    </div>
     </div>
   );
 };

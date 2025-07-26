@@ -9,7 +9,7 @@ export const Cards = ({ id, url, index, name, clr, description, Icon }) => {
       data-aos-delay={index * 100}
     >
       {/* Icon & Title Section */}
-      <div className={`px-4 py-10 ${clr} flex flex-col items-center gap-3`}>
+      <div className={`px-4 py-10 ${clr} h-40 flex flex-col items-center gap-3`}>
         <Icon
           size={40}
           className="text-white animate-customPulse  transition-all group-hover:scale-110"
@@ -18,7 +18,7 @@ export const Cards = ({ id, url, index, name, clr, description, Icon }) => {
       </div>
 
       {/* Description Section */}
-      <div className="bg-white px-4 py-5 h-32 flex items-center justify-center">
+      <div className="bg-white px-4 py-10 h-46  flex items-center overflow-hidden justify-center">
         <p className="text-gray-700 text-center text-sm">{description}</p>
       </div>
     </NavLink>

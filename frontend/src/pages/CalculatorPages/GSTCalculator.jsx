@@ -24,7 +24,7 @@ export const GSTCalculator = () => {
   };
 
   return (
-    <div className="flex-grow flex items-center justify-center   px-4">
+    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md p-6 bg-white rounded-xl shadow-md border border-gray-200">
         <h2 className="text-2xl font-bold mb-4 text-[#3190ce]">GST Calculator</h2>
 
