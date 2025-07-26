@@ -5,10 +5,10 @@ export const About = () => {
           <h1 className="text-5xl text-[#3190ce] text-center font-extrabold font-sans mb-[5%] " data-aos="fade" data-delay-aos={100}>About Us</h1>
       <div className="container flex flex-row px-4 ">
         <div className="content-container   " data-aos="fade-right" data-delay-aos={120}>
-          <p className="md:w-2xl text-xl text-center">
+          <p className="lg:w-2xl text-xl text-center">
             <strong className="text-[#3190ce]">CalcMate</strong>is a powerful
             and intuitive
-            <strong className="text-[#3190ce]">calculator app</strong>developed
+            <strong className="text-[#3190ce]">calculator app</strong> developed
             to
             <strong className="text-[#3190ce]">
               automate and simplify the daily tasks of users
@@ -16,7 +16,7 @@ export const About = () => {
             , making life easier with just a few taps. Built to offer speed,
             accuracy, and reliability, CalcMate brings together a suite of
             essential tools including a
-            <strong className="text-[#3190ce]">
+            <strong className="text-[#3190ce]"> 
               GST calculator, percentage calculator, loan/EMI calculator, BMI
               calculator, age calculator, scientific calculator, currency
               converter, time duration calculator, tax calculator
@@ -31,9 +31,9 @@ export const About = () => {
             name in the digital world and a
             <strong className="text-[#3190ce]">
               dynamic information technology company
-            </strong>{" "}
+            </strong>{" "} 
             committed to delivering
-            <strong className="text-[#3190ce]">innovative solutions</strong>for
+            <strong className="text-[#3190ce]">innovative solutions</strong> for
             modern needs. Daim Soft Hub is the
             <strong className="text-[#3190ce]">
               digital partner of businesses and individuals
@@ -55,7 +55,7 @@ export const About = () => {
               enhance productivity, support digital growth
             </strong>
             , and
-            <strong className="text-[#3190ce]"> drive long-term success</strong>
+            <strong className="text-[#3190ce]"> drive long-term success</strong> 
             Backed by a team of experts and a commitment to excellence, CalcMate
             stands as a shining example of how technology and innovation can
             come together to serve people better every day.
