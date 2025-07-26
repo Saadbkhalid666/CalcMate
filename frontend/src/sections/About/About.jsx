@@ -61,7 +61,7 @@ export const About = () => {
             come together to serve people better every day.
           </p>
         </div>
-        <div className="image-container hidden md:block relative" data-aos="fade-left" data-delay-aos={130}>
+        <div className="image-container hidden lg:block relative" data-aos="fade-left" data-delay-aos={130}>
           <img src={daimLogo} alt="Daim Soft Hub" />
         </div>
       </div>
