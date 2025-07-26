@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <div className="bg-[#3190ce] min-h-[90vh] w-full">
       <div
-        className="intro-container flex justify-center flex-col pb-10  pt-35"
+        className="intro-container flex justify-center flex-col pb-10  pt-20"
         id="home"
         data-aos="fade-up"
       >
