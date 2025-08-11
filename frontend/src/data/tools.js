@@ -1,4 +1,15 @@
-import { FaCalculator, FaPercent, FaMoneyBillWave, FaHeartbeat, FaBirthdayCake, FaFlask, FaExchangeAlt, FaClock, FaFileInvoiceDollar, FaLayerGroup } from "react-icons/fa";
+import { 
+  FaCalculator, 
+  FaPercent, 
+  FaMoneyBillWave, 
+  FaHeartbeat, 
+  FaBirthdayCake, 
+  FaFlask, 
+  FaExchangeAlt, 
+  FaClock, 
+  FaFileInvoiceDollar, 
+  FaLayerGroup 
+} from "react-icons/fa";
 
 export const ToolsList = [
   {
@@ -9,6 +20,7 @@ export const ToolsList = [
     url: "/gst-calculator",
     icon: FaCalculator,
     clr: "bg-yellow-400",
+    category: "Finance",
   },
   {
     id: "percentage-calculator",
@@ -18,6 +30,7 @@ export const ToolsList = [
     url: "/percentage-calculator",
     icon: FaPercent,
     clr: "bg-pink-400",
+    category: "Math",
   },
   {
     id: "loan-emi-calculator",
@@ -27,6 +40,7 @@ export const ToolsList = [
     url: "/loan-emi-calculator",
     icon: FaMoneyBillWave,
     clr: "bg-purple-500",
+    category: "Finance",
   },
   {
     id: "bmi-calculator",
@@ -36,6 +50,7 @@ export const ToolsList = [
     url: "/bmi-calculator",
     icon: FaHeartbeat,
     clr: "bg-orange-500",
+    category: "Health",
   },
   {
     id: "age-calculator",
@@ -45,6 +60,7 @@ export const ToolsList = [
     url: "/age-calculator",
     icon: FaBirthdayCake,
     clr: "bg-blue-400",
+    category: "Date & Time",
   },
   {
     id: "scientific-calculator",
@@ -54,6 +70,7 @@ export const ToolsList = [
     url: "/scientific-calculator",
     icon: FaFlask,
     clr: "bg-green-500",
+    category: "Math",
   },
   {
     id: "currency-converter",
@@ -63,6 +80,7 @@ export const ToolsList = [
     url: "/currency-converter",
     icon: FaExchangeAlt,
     clr: "bg-red-500",
+    category: "Finance",
   },
   {
     id: "time-duration-calculator",
@@ -72,6 +90,7 @@ export const ToolsList = [
     url: "/time-duration-calculator",
     icon: FaClock,
     clr: "bg-indigo-500",
+    category: "Date & Time",
   },
   {
     id: "tax-calculator",
@@ -81,6 +100,7 @@ export const ToolsList = [
     url: "/tax-calculator",
     icon: FaFileInvoiceDollar,
     clr: "bg-teal-500",
+    category: "Finance",
   },
   {
     id: "unit-converter",
@@ -90,5 +110,6 @@ export const ToolsList = [
     url: "/unit-converter",
     icon: FaLayerGroup,
     clr: "bg-cyan-500",
+    category: "Measurement",
   },
 ];

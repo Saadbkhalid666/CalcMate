@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const Cards = ({ id, url, index, name, clr, description, Icon }) => {
+export const Cards = ({ id, url, index, name, clr, description, category,Icon }) => {
   return (
     <NavLink
       to={url}
@@ -21,6 +21,7 @@ export const Cards = ({ id, url, index, name, clr, description, Icon }) => {
       <div className="bg-white px-4 py-10 h-46  flex items-center overflow-hidden justify-center">
         <p className="text-gray-700 text-center text-sm">{description}</p>
       </div>
+        <p className="text-sm font-bold text-gray-400 text-center">Category : {category}</p>
     </NavLink>
   );
 };
