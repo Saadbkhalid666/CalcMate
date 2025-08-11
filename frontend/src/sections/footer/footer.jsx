@@ -23,22 +23,22 @@ export const Footer = () => {
            
         </div>
 
-        <div className="text-center md:text-right text-sm">
+        <div className="text-center md:text-right text-md">
           <p>
             Powered by{" "}
             <a
-              href="https://daimsofthub.com"
+              href="https://saadbinkhalid.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-gray-200"
+              className="underline  hover:text-gray-200"
             >
-              Daim Soft Hub
+              Saad.Dev
             </a>
           </p>
         </div>
       </div>
 
-      <div className="mt-4 text-center text-xs text-white/80">
+      <div className="mt-4 text-center text-md font-extrabold text-white/80">
         &copy; {new Date().getFullYear()} CalcMate. All rights reserved.
       </div>
     </footer>
