@@ -10,8 +10,6 @@ export const Nav = () => {
 
   const navItems = [
     { label: "Calculators", path: "calculators" },
-    { label: "About Us", path: "aboutus" },
-    { label: "Contact", path: "contact" },
   ];
 
   return (

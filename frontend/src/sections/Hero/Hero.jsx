@@ -11,7 +11,7 @@ export const Hero = () => {
         data-aos="fade-up"
       >
         <h1 className="text-3xl text-white text-center font-extrabold font-sans">
-          DaimTools - Calculator Suite
+          CalcMate - Calculator Suite
         </h1>
         <p className="text-xl text-gray-100 text-center mt-3">
           All-in-One Online Calculators for Finance, Health, and Everyday Needs

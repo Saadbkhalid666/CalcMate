@@ -3,8 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Calc } from "./sections/Calculators/Calc";
-import { About } from "./sections/About/About";
-import { Contact } from "./sections/Contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -18,8 +16,6 @@ function App() {
     <>
       <Hero />
       <Calc />
-      <About />
-      <Contact  />
     </>
   );
 }
