@@ -65,10 +65,10 @@ const PrivacyPolicy = () => {
         You have the right to request access, correction, or deletion of your
         personal data by contacting us directly at{" "}
         <a
-          href="https:\\info@daimsofthub.com"
+          href="https:\\saadbinkhalid.vercel.app"
           className="text-[#3190ce] underline"
         >
-          info@daimsofthub.com
+          Saad.Dev
         </a>
         .
       </p>
@@ -88,10 +88,10 @@ const PrivacyPolicy = () => {
         If you have any questions about our Privacy Policy, feel free to reach
         out at{" "}
         <a
-          href="https:\\info@daimsofthub.com"
+          href="https:\\saadbinkhalid.vercel.app"
           className="text-[#3190ce] underline"
         >
-                info@daimsofthub.com
+                 Saad.Dev
         </a>
         .
       </p>

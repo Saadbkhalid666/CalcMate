@@ -72,10 +72,10 @@ const TermsAndConditions = () => {
       <p className="mb-4">
         If you have any questions about these Terms, feel free to reach out at{" "}
         <a
-          href="https:\\info@daimsofthub.com"
+          href="https:\\saadbinkhalid.vercel.app"
           className="text-[#3190ce] underline"
         >
-           info@daimsofthub.com
+           Saad.Dev
         </a>
         .
       </p>
